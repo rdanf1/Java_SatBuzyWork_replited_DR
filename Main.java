@@ -1,6 +1,6 @@
 //
-//  DR - Execution plus rapide sur "xterm"
-//  avec 2 commandes : (cf console output)
+//  DR - Faster Execution on "xterm"
+//  with 2 commands : (cf console output)
 // $ javac -d . $(find . -type f -name '*.java')
 // $ java -classpath .:target/dependency/* Main
 
