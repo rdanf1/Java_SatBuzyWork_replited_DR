@@ -4,6 +4,8 @@
 // $ javac -d . $(find . -type f -name '*.java')
 // $ java -classpath .:target/dependency/* Main
 
+import java.util.Scanner;  // CF line 42 dietetics
+
 class Main {
   public static void main(String[] args) {
     System.out.println("Hello world!");
@@ -36,5 +38,22 @@ class Main {
     System.out.println("int b = -2147483648 - 1 donne : " + b);   
  
     System.out.println("          ***             ***");
+
+    Scanner scannerObject = new Scanner(System.in);
+		
+		System.out.println("Veuillez saisir votre poids en kilogrammes :");
+		double poids = scannerObject.nextDouble();
+		
+		System.out.println("Veuillez saisir votre taille en mètres :");
+		double taille = scannerObject.nextDouble();
+		
+		double imc = poids / (taille * taille);
+		boolean maigre = imc >= 16.5 && imc <= 18.5;
+		
+		System.out.println("Votre I. M. C. est de : " + imc);
+		System.out.println("Êtes-vous maigre : " + maigre);
+		
+		scannerObject.close();
+    
     }
   }
